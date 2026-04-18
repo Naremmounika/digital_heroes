@@ -1,0 +1,87 @@
+POST http://localhost:5000/signup
+Content-Type: application/json
+
+{
+    "name":  "Mounika",
+    "email":"mouni@gmail.com",
+    "password":"123456"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"mouni@gmail.com",
+    "password":"123456"
+}
+###
+GET http://localhost:5000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2NDM1NzI4LCJleHAiOjE3NzY1MjIxMjh9.5Gb2cDlilqIlGZF1J-sXX-WSmUWRTv4kM5ca8jC01kE
+###
+
+
+POST http://localhost:5000/add-score
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2NDM1NzI4LCJleHAiOjE3NzY1MjIxMjh9.5Gb2cDlilqIlGZF1J-sXX-WSmUWRTv4kM5ca8jC01kE
+Content-Type: application/json
+
+{
+    "score": 23,
+    "date": "2026-04-03"
+}
+###
+GET http://localhost:5000/scores
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2NDM1NzI4LCJleHAiOjE3NzY1MjIxMjh9.5Gb2cDlilqIlGZF1J-sXX-WSmUWRTv4kM5ca8jC01kE
+###
+
+POST http://localhost:5000/draw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+Content-Type: application/json
+
+{
+  "month": "2026-04",
+  "numbers": [5, 12, 23, 34, 41]
+}
+
+###
+POST http://localhost:5000/run-draw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM 
+###
+
+POST http://localhost:5000/distribute-prize
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQzNzU0NywiZXhwIjoxNzc2NTIzOTQ3fQ.ouEp98VyydTrX0rM1Y95-3DZrz2BvJcshzxgdTjo3R0
+###
+POST http://localhost:5000/charity
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+Content-Type: application/json
+
+{
+  "name": "Save Children",
+  "description": "Helps underprivileged children education",
+  "image_url": "https://example.com/image.jpg"
+}
+###
+GET http://localhost:5000/charities
+###
+POST http://localhost:5000/select-charity
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2NDM1NzI4LCJleHAiOjE3NzY1MjIxMjh9.5Gb2cDlilqIlGZF1J-sXX-WSmUWRTv4kM5ca8jC01kE
+Content-Type: application/json
+
+{
+  "charity_id": "64246d38-7236-4824-b2ad-c1385f95257d",
+  "percent": 10
+}
+###
+
+GET http://localhost:5000/admin/overview
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+###
+GET http://localhost:5000/admin/winners
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+###
+GET http://localhost:5000/admin/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+###
+
+GET http://localhost:5000/admin/draws
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFjYjM3M2VhLTk0MTYtNDgwYi05MGQwLWY2ZTA3OWNhN2Y0NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NjQ4NjgzNCwiZXhwIjoxNzc2NTczMjM0fQ.wMWdJLVXYHq3F8YAo7PIf4VjzJrkyKAthL9gAwUKlBM
+###
